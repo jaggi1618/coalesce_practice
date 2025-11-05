@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 8264a32f-63f6-41f1-b5a1-820177def67a
+name: EMPLOYEES
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 478e0181-ecf6-410a-9c3f-221d45ba3a14
+          stepCounter: 8264a32f-63f6-41f1-b5a1-820177def67a
+        config: {}
+        dataType: NUMBER(1,0)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0ab5146-f6c3-41f0-a72b-ea07292ca430
+          stepCounter: 8264a32f-63f6-41f1-b5a1-820177def67a
+        config: {}
+        dataType: VARCHAR(7)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0edb3570-bf7b-40f5-ab20-0a89fe0d39bd
+          stepCounter: 8264a32f-63f6-41f1-b5a1-820177def67a
+        config: {}
+        dataType: VARCHAR(11)
+        defaultValue: ""
+        description: ""
+        name: DEPARTMENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: feca7e01-dd90-469b-b7f7-983faf66ea4f
+          stepCounter: 8264a32f-63f6-41f1-b5a1-820177def67a
+        config: {}
+        dataType: NUMBER(5,0)
+        defaultValue: ""
+        description: ""
+        name: SALARY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: EMPLOYEES
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

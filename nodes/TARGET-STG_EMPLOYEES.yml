@@ -1,0 +1,116 @@
+fileVersion: 1
+id: bf39409d-001d-4e37-a8a9-4ea720d79342
+name: STG_EMPLOYEES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: babacdfc-566a-4adb-9cb5-9be71dcb4fb0
+          stepCounter: bf39409d-001d-4e37-a8a9-4ea720d79342
+        config: {}
+        dataType: NUMBER(1,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 478e0181-ecf6-410a-9c3f-221d45ba3a14
+                stepCounter: 8264a32f-63f6-41f1-b5a1-820177def67a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c1bd6e8-45cf-4f15-a7cf-be755863dc01
+          stepCounter: bf39409d-001d-4e37-a8a9-4ea720d79342
+        config: {}
+        dataType: VARCHAR(7)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b0ab5146-f6c3-41f0-a72b-ea07292ca430
+                stepCounter: 8264a32f-63f6-41f1-b5a1-820177def67a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: de739f54-aed4-4abd-b585-493dcef27758
+          stepCounter: bf39409d-001d-4e37-a8a9-4ea720d79342
+        config: {}
+        dataType: VARCHAR(11)
+        description: ""
+        name: DEPARTMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0edb3570-bf7b-40f5-ab20-0a89fe0d39bd
+                stepCounter: 8264a32f-63f6-41f1-b5a1-820177def67a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a139c3b-e636-4296-a122-18ea3d6da148
+          stepCounter: bf39409d-001d-4e37-a8a9-4ea720d79342
+        config: {}
+        dataType: NUMBER(5,0)
+        description: ""
+        name: SALARY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: feca7e01-dd90-469b-b7f7-983faf66ea4f
+                stepCounter: 8264a32f-63f6-41f1-b5a1-820177def67a
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2520a82e-305e-40aa-86f9-16fd5f8094f5
+          stepCounter: bf39409d-001d-4e37-a8a9-4ea720d79342
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: salary_scale
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: case when "EMPLOYEES"."SALARY" < 40000 then 'Low' when "EMPLOYEES"."SALARY" < 700000 then 'Medium' ELSE 'High' END
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          EMPLOYEES: 8264a32f-63f6-41f1-b5a1-820177def67a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: EMPLOYEES
+        join:
+          joinCondition: FROM {{ ref('SRC', 'EMPLOYEES') }} "EMPLOYEES"
+        name: STG_EMPLOYEES
+        noLinkRefs: []
+  name: STG_EMPLOYEES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
