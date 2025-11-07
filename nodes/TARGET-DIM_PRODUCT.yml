@@ -1,0 +1,160 @@
+fileVersion: 1
+id: f85e4ac9-932c-44eb-b1f2-acd9949c69c6
+name: DIM_PRODUCT
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 953a924a-14c5-4d8d-b9b1-b4446efc38c0
+          stepCounter: f85e4ac9-932c-44eb-b1f2-acd9949c69c6
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: DIM_PRODUCT_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 493fb8a3-da99-4a31-8e84-ea2f9873babc
+          stepCounter: f85e4ac9-932c-44eb-b1f2-acd9949c69c6
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: PSTG_PRODUCT_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 330161dc-f079-46ce-8c39-382d843473ac
+                stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37bfa0ff-2449-4422-8fbb-dcb7a5c2429b
+          stepCounter: f85e4ac9-932c-44eb-b1f2-acd9949c69c6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: PROD_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 130d5c66-7ab3-488b-b0bd-a65107040301
+                stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73b2536b-902d-4409-9477-3b71f6491a2d
+          stepCounter: f85e4ac9-932c-44eb-b1f2-acd9949c69c6
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PROD_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ae2a8eba-4bf6-416f-a06f-09987fb3a306
+                stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6d3a6f3-a96b-4df6-8cfb-6ac585e93e02
+          stepCounter: f85e4ac9-932c-44eb-b1f2-acd9949c69c6
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 77c91f55-b11a-462a-870d-88b8d549ed65
+                stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 117bfb5a-5e4f-4fd4-981c-9c5b31bb797b
+          stepCounter: f85e4ac9-932c-44eb-b1f2-acd9949c69c6
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cb741294-ced5-41db-8f7e-090ccd26cfb6
+                stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0be65539-3fba-4f84-8188-24784dddc6a3
+          stepCounter: f85e4ac9-932c-44eb-b1f2-acd9949c69c6
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f4773426-8c14-45a7-86c1-1b5f15d9a949
+                stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7e521f49-6a54-45df-9f73-84e77616844f
+          stepCounter: f85e4ac9-932c-44eb-b1f2-acd9949c69c6
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: UPDATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CURRENT_TIMESTAMP()
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          PSTG_PRODUCT: 8b06271c-2264-4e15-833c-bda023d25205
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: PSTG_PRODUCT
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'PSTG_PRODUCT') }} "PSTG_PRODUCT"
+        name: DIM_PRODUCT
+        noLinkRefs: []
+  name: DIM_PRODUCT
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

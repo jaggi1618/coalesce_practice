@@ -1,0 +1,111 @@
+fileVersion: 1
+id: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+name: PSTG_ORDER_ITEMS
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4981a559-d033-4e8b-a5c0-4e4a6846ffa3
+          stepCounter: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: PSTG_ORDER_ITEMS_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5426128b-c8b5-42d6-b17a-1f78178f7d0d
+          stepCounter: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+        config: {}
+        dataType: INT
+        description: ""
+        name: ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 83df22a1-38e2-4fd5-bb0b-66613ced2ea4
+                stepCounter: 9981447a-1c57-4b38-9a02-8c0d1f97d4df
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 57f77bff-5015-49bd-a4b0-bab2eb04f05f
+          stepCounter: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+        config: {}
+        dataType: INT
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cd7000aa-91e1-453c-a061-7096d0061fde
+                stepCounter: 9981447a-1c57-4b38-9a02-8c0d1f97d4df
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e1975bc-6bd1-4bf8-9af5-2296089c4e6d
+          stepCounter: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+        config: {}
+        dataType: INT
+        description: ""
+        name: PROD_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c9f7da42-46a4-4519-ba47-4e5d193baa26
+                stepCounter: 9981447a-1c57-4b38-9a02-8c0d1f97d4df
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e0c9c125-3306-4cd6-b72a-b464fbe9a2da
+          stepCounter: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+        config: {}
+        dataType: INT
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2b3a6858-978a-4631-a479-307e781a9007
+                stepCounter: 9981447a-1c57-4b38-9a02-8c0d1f97d4df
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ORDER_ITEMS: 9981447a-1c57-4b38-9a02-8c0d1f97d4df
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: STG_ORDER_ITEMS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'STG_ORDER_ITEMS') }} "STG_ORDER_ITEMS"
+        name: PSTG_ORDER_ITEMS
+        noLinkRefs: []
+  name: PSTG_ORDER_ITEMS
+  overrideSQL: false
+  schema: ""
+  sqlType: persistentStage
+  type: sql
+  version: 1
+type: Node

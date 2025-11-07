@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 935011af-11f8-4146-9f6b-b20a33aef2d1
+name: ORDER_ITEMS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b45ae652-34d5-4566-9954-3c6a94e68581
+          stepCounter: 935011af-11f8-4146-9f6b-b20a33aef2d1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ITEM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 700d078d-a491-4adf-87ce-cc82c48ac90d
+          stepCounter: 935011af-11f8-4146-9f6b-b20a33aef2d1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 28391711-b29e-4def-9e82-ef498d61a61c
+          stepCounter: 935011af-11f8-4146-9f6b-b20a33aef2d1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PROD_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a6b0b70d-c3f2-4200-a7b3-f3cfb654c228
+          stepCounter: 935011af-11f8-4146-9f6b-b20a33aef2d1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: QUANTITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ORDER_ITEMS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

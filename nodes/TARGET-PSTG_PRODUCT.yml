@@ -1,0 +1,125 @@
+fileVersion: 1
+id: 8b06271c-2264-4e15-833c-bda023d25205
+name: PSTG_PRODUCT
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 330161dc-f079-46ce-8c39-382d843473ac
+          stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: PSTG_PRODUCT_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 130d5c66-7ab3-488b-b0bd-a65107040301
+          stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PROD_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: efa3d6d9-f263-458e-afd6-fb23457f07fb
+                stepCounter: 6af6a3e4-b09e-4c2f-9758-1f14ff934f58
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae2a8eba-4bf6-416f-a06f-09987fb3a306
+          stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PROD_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 70db2aaa-b408-4d26-9eea-120dd4d950e5
+                stepCounter: 6af6a3e4-b09e-4c2f-9758-1f14ff934f58
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77c91f55-b11a-462a-870d-88b8d549ed65
+          stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ff28ca04-e27b-49b2-adf3-aa703c59d9c3
+                stepCounter: 6af6a3e4-b09e-4c2f-9758-1f14ff934f58
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cb741294-ced5-41db-8f7e-090ccd26cfb6
+          stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: df9d9241-c9b8-4fa7-8e18-f688176c20a7
+                stepCounter: 6af6a3e4-b09e-4c2f-9758-1f14ff934f58
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4773426-8c14-45a7-86c1-1b5f15d9a949
+          stepCounter: 8b06271c-2264-4e15-833c-bda023d25205
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c649657f-a72a-4db3-8876-93704ad6c2e5
+                stepCounter: 6af6a3e4-b09e-4c2f-9758-1f14ff934f58
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_PRODUCT: 6af6a3e4-b09e-4c2f-9758-1f14ff934f58
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: STG_PRODUCT
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'STG_PRODUCT') }} "STG_PRODUCT"
+        name: PSTG_PRODUCT
+        noLinkRefs: []
+  name: PSTG_PRODUCT
+  overrideSQL: false
+  schema: ""
+  sqlType: persistentStage
+  type: sql
+  version: 1
+type: Node

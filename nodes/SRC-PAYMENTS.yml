@@ -1,0 +1,111 @@
+fileVersion: 1
+id: afc2308c-b62c-4d1e-adab-62636a54ad00
+name: PAYMENTS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25e69da4-be8e-4e12-9cd5-9ab79f98550b
+          stepCounter: afc2308c-b62c-4d1e-adab-62636a54ad00
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PAYMENT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d7af6ab0-0f2b-4821-8cbb-52e844ea1551
+          stepCounter: afc2308c-b62c-4d1e-adab-62636a54ad00
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4c1e985-e12b-49ad-80e2-c2e9dfd7fc73
+          stepCounter: afc2308c-b62c-4d1e-adab-62636a54ad00
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PAYMENT_METHOD
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a37ec90-6418-479a-a341-ab19baad82cc
+          stepCounter: afc2308c-b62c-4d1e-adab-62636a54ad00
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: PAYMENT_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a101bfb-d977-417b-94ae-80e87f487fa6
+          stepCounter: afc2308c-b62c-4d1e-adab-62636a54ad00
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: STATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: PAYMENTS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

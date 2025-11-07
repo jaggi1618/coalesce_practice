@@ -1,0 +1,125 @@
+fileVersion: 1
+id: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+name: PSTG_PAYMENTS
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3379572e-6a6c-4bb9-a88a-b3c560e9421c
+          stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: PSTG_PAYMENTS_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c737561-178f-485c-adc8-6df35791164b
+          stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PAYMENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 11a52b9c-3ce8-4893-8e6e-0549556b5b51
+                stepCounter: 5205ff22-58ef-441b-a0c3-cc8fc921334b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f6768f1-7f07-4555-b120-6839e8521dd2
+          stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ebda5f17-a99a-4b3c-ac8d-ad661ad92da2
+                stepCounter: 5205ff22-58ef-441b-a0c3-cc8fc921334b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 323e36bf-ddf6-42ad-b322-d967f2110eb8
+          stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PAYMENT_METHOD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8877936b-2b9c-47e5-b2ba-6520ea77de82
+                stepCounter: 5205ff22-58ef-441b-a0c3-cc8fc921334b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e59b827-817a-4b43-81be-441538ca2fe6
+          stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+        config: {}
+        dataType: DATE
+        description: ""
+        name: PAYMENT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6a41d902-400c-40e2-908f-7de7466e8ecc
+                stepCounter: 5205ff22-58ef-441b-a0c3-cc8fc921334b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 794a29db-d5cf-405c-9ec7-f4945e0a6d5a
+          stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bfef85f2-e1d8-47d5-8fdc-d9aac2a4da25
+                stepCounter: 5205ff22-58ef-441b-a0c3-cc8fc921334b
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_PAYMENTS: 5205ff22-58ef-441b-a0c3-cc8fc921334b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: STG_PAYMENTS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'STG_PAYMENTS') }} "STG_PAYMENTS"
+        name: PSTG_PAYMENTS
+        noLinkRefs: []
+  name: PSTG_PAYMENTS
+  overrideSQL: false
+  schema: ""
+  sqlType: persistentStage
+  type: sql
+  version: 1
+type: Node

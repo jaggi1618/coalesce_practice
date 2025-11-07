@@ -1,0 +1,279 @@
+fileVersion: 1
+id: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+name: FCT_PAYMENTS_ORDER_ITEMS_ORDERS
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cdc9f260-77d1-4ea0-b193-4734f072c23c
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: PSTG_PAYMENTS_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3379572e-6a6c-4bb9-a88a-b3c560e9421c
+                stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9c167ba-93d4-4753-b5e3-69aaa6d2d136
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PAYMENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8c737561-178f-485c-adc8-6df35791164b
+                stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7190d0a0-7d74-45ac-8089-c41754a84c6e
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0f6768f1-7f07-4555-b120-6839e8521dd2
+                stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c2facadd-d5c2-45a8-ac1b-1757ee5c6cdc
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PAYMENT_METHOD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 323e36bf-ddf6-42ad-b322-d967f2110eb8
+                stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37cf7d0e-2ede-4215-a318-53242b865a87
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: DATE
+        description: ""
+        name: PAYMENT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3e59b827-817a-4b43-81be-441538ca2fe6
+                stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f54f36fd-0408-4e52-8b28-bbe90b129f6c
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 794a29db-d5cf-405c-9ec7-f4945e0a6d5a
+                stepCounter: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bb8dfece-9f13-4cee-9280-ef6d27894ff9
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: PSTG_ORDER_ITEMS_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4981a559-d033-4e8b-a5c0-4e4a6846ffa3
+                stepCounter: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c9bd3a43-e18d-4871-99bd-160b6457ef9d
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: INT
+        description: ""
+        name: ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5426128b-c8b5-42d6-b17a-1f78178f7d0d
+                stepCounter: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5649cd95-c620-4376-be89-0982e955c1d8
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: INT
+        description: ""
+        name: PROD_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e1975bc-6bd1-4bf8-9af5-2296089c4e6d
+                stepCounter: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2ad00bf3-cb93-4552-b9e1-bb2ce7efb918
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: INT
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e0c9c125-3306-4cd6-b72a-b464fbe9a2da
+                stepCounter: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d6e47b4-b1b6-468b-ba4d-ec24d4f83564
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: PSTG_ORDERS_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7ac51733-c586-49f8-99d3-1d457f94e44a
+                stepCounter: 8ead8642-dacc-4cc0-bf63-0b1c42fec826
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0f247c6-d10e-4314-ad5a-b29ba46701f0
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: INT
+        description: ""
+        name: CUST_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fe259b43-b610-49d4-8492-ede179bcfd9e
+                stepCounter: 8ead8642-dacc-4cc0-bf63-0b1c42fec826
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1b0583a-90c3-47b6-8a3b-9db92e926211
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: DATE
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 11b08b90-06b0-4aca-9ca6-9fcc28949429
+                stepCounter: 8ead8642-dacc-4cc0-bf63-0b1c42fec826
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01c2e21a-a06e-4e9a-8c6f-613f50ca3c67
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: TOTAL_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 15f97ed2-d5de-4ed5-8d7e-919d26645f92
+                stepCounter: 8ead8642-dacc-4cc0-bf63-0b1c42fec826
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7021218-2628-4f8a-8fd2-332c2afa2d98
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6f227f5-99b4-4778-8e91-f0a940da9bca
+          stepCounter: a435f049-d8e6-4dce-8747-c6d15cf3b56c
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          PSTG_ORDERS: 8ead8642-dacc-4cc0-bf63-0b1c42fec826
+          PSTG_ORDER_ITEMS: a3b5b658-dd38-4a2f-b69a-1f78fac35ed1
+          PSTG_PAYMENTS: 1103f779-37fd-4ba0-a0ed-7c33262f7cab
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: PSTG_ORDER_ITEMS
+          - locationName: TARGET
+            nodeName: PSTG_ORDERS
+          - locationName: TARGET
+            nodeName: PSTG_PAYMENTS
+        join:
+          joinCondition: |
+            FROM {{ ref('TARGET', 'PSTG_PAYMENTS') }} PSTG_PAYMENTS
+            LEFT JOIN {{ ref('TARGET', 'PSTG_ORDER_ITEMS') }} PSTG_ORDER_ITEMS
+                ON PSTG_PAYMENTS.ORDER_ID = PSTG_ORDER_ITEMS.ORDER_ID
+            LEFT JOIN {{ ref('TARGET', 'PSTG_ORDERS') }} PSTG_ORDERS
+                ON PSTG_PAYMENTS.ORDER_ID = PSTG_ORDERS.ORDER_ID
+        name: FCT_PAYMENTS_ORDER_ITEMS_ORDERS
+        noLinkRefs: []
+  name: FCT_PAYMENTS_ORDER_ITEMS_ORDERS
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node
